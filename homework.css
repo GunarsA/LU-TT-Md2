@@ -6,17 +6,34 @@ Student ID number: <enter your student id number here>
 @import url("https://fonts.googleapis.com/css?family=Montserrat");
 @import url("https://fonts.googleapis.com/css2?family=Russo+One");
 
-.centered-content {
-  min-width: 534px;
+body {
   font-family: "Montserrat", sans-serif;
 }
 
+.centered-content {
+  min-width: 534px;
+}
+
 #page-container {
-    width: 80%;
-    margin: 0 auto;
+  width: 80%;
+  margin: 0 auto;
 }
 
 .top_banner {
-    background-image: url("./images/intro-img-812gts.jfif");
-    height: 100vh;
+  background-image: url("./images/intro-img-812gts.jfif");
+  background-size: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+.slogan {
+  color: rgba(0, 0, 0, 0.6);
+  font-family: "Russo One", sans-serif;
+  text-transform: uppercase;
+  text-shadow: 2px;
+  font-size: larger;
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translate(-50%, 0);
 }
