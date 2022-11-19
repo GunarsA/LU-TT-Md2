@@ -8,6 +8,10 @@ Student ID number: <enter your student id number here>
 
 body {
   font-family: "Montserrat", sans-serif;
+  background-image: url("./images/background.jpg");
+  background-size: 100%;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
 }
 
 .centered-content {
@@ -19,9 +23,12 @@ body {
   margin: 0 auto;
 }
 
+/* Top Banner */
+
 .top_banner {
   background-image: url("./images/intro-img-812gts.jfif");
   background-size: 100%;
+  background-repeat: no-repeat;
   height: 100vh;
   position: relative;
 }
@@ -36,4 +43,39 @@ body {
   bottom: 5%;
   left: 50%;
   transform: translate(-50%, 0);
+}
+
+/* Top Menu */
+
+#main-menu {
+  position: sticky;
+  background-color: black;
+}
+
+#main-menu::after {
+  content: "";
+  clear: both;
+}
+
+.upper-menu,
+.sub-menu-caption {
+  float: left;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.sub-menu-caption,
+.upper-menu > a {
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  text-align: center;
+  vertical-align: middle;
+  text-transform: uppercase;
+}
+
+.right-menu {
+  float: right;
+}
+
+.sub-menu {
+  display: none;
 }
