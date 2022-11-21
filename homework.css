@@ -9,19 +9,18 @@ Student ID number: <enter your student id number here>
 body {
   font-family: "Montserrat", sans-serif;
   background-image: url("./images/background.jpg");
-  background-size: 100%;
+  background-size: cover;
+  background-position: center  center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
   color: rgba(255, 255, 255, 0.8);
   font-size: 14px;
   text-align: justify;
   line-height: 1.5em;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
 }
-
 .centered-content {
   min-width: 534px;
 }
-
 #page-container {
   width: 80%;
   margin: 0 auto;
@@ -31,12 +30,12 @@ body {
 
 .top_banner {
   background-image: url("./images/intro-img-812gts.jfif");
-  background-size: 100%;
+  background-size: cover;
+  background-position: center  center;
   background-repeat: no-repeat;
   height: 100vh;
   position: relative;
 }
-
 .slogan {
   color: rgba(0, 0, 0, 0.6);
   font-family: "Russo One", sans-serif;
@@ -50,39 +49,6 @@ body {
 }
 
 /* Top Menu */
-
-/* #main-menu {
-  position: sticky;
-  background-color: black;
-}
-
-#main-menu::after {
-  content: "";
-  clear: both;
-}
-
-.upper-menu,
-.sub-menu-caption {
-  float: left;
-  color: rgba(255, 255, 255, 0.7);
-}
-
-.sub-menu-caption,
-.upper-menu > a {
-  color: rgba(255, 255, 255, 0.7);
-  text-decoration: none;
-  text-align: center;
-  vertical-align: middle;
-  text-transform: uppercase;
-}
-
-.right-menu {
-  float: right;
-}
-
-.sub-menu {
-  display: none;
-} */
 
 nav {
   margin-top: -5px;
@@ -127,12 +93,10 @@ nav {
   border-top: none;
   padding: 10px;
 }
-
 .sub-menu li:last-of-type {
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
 }
-
 .right-menu {
   background-color: rgba(255, 0, 0, 0.5);
   float: right;
@@ -269,8 +233,8 @@ article {
   display: inline;
 }
 .spec-container .bottom dl dd::after {
-    content: "\a";
-    white-space: pre;
+  content: "\a";
+  white-space: pre;
 }
 .specs > h3 {
   font-weight: 100;
@@ -279,8 +243,8 @@ article {
 /* Bottom menu */
 
 footer {
-  background-color: rgba(0,0,0,0.8);
-padding-top: 5px;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding-top: 5px;
   display: flex;
 }
 .menu-bottom {
@@ -288,23 +252,37 @@ padding-top: 5px;
   margin-bottom: 10px;
 }
 .menu-bottom li {
-border-left: 1px solid rgba(255,0,0,0.8);
+  border-left: 1px solid rgba(255, 0, 0, 0.8);
   display: inline-block;
 }
 .menu-bottom li:first-of-type {
   border-left: none;
 }
 .menu-bottom li a {
-color: rgba(255,0,0,0.8);
+  color: rgba(255, 0, 0, 0.8);
   text-transform: capitalize;
   text-decoration: none;
-  font-variant:small-caps;
+  font-variant: small-caps;
   padding: 0 5px 0 5px;
-}	
+}
 
 #copyright {
-color: rgba(255,0,0,0.5);
-font-size: 0.75em;
+  color: rgba(255, 0, 0, 0.5);
+  font-size: 0.75em;
   text-align: center;
 }
 
+#logo {
+  right: 0;
+  bottom: 0;
+  position: fixed;
+}
+
+#logo:hover img {
+  border: 2px solid red;
+}
+
+li a:hover {
+  color: rgb(255, 0, 0);
+  text-decoration: underline;
+}
