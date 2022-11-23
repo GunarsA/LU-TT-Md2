@@ -1,6 +1,6 @@
 /*Info about the author 
-Name, surname: <enter your name, surname here>
-Student ID number: <enter your student id number here>
+Name, surname: Gunārs Ābeltiņš
+Student ID number: ga22008
 */
 
 @import url("https://fonts.googleapis.com/css?family=Montserrat");
@@ -10,20 +10,24 @@ body {
   font-family: "Montserrat", sans-serif;
   background-image: url("./images/background.jpg");
   background-size: cover;
-  background-position: center  center;
+  background-position: center center;
   background-attachment: fixed;
   background-repeat: no-repeat;
-  color: rgba(255, 255, 255, 0.8);
+  box-sizing: border-box;
+}
+.centered-content {
+  min-width: 534px;
+  color: rgba(255, 255, 255, 0.6);
   font-size: 14px;
   text-align: justify;
   line-height: 1.5em;
 }
-.centered-content {
-  min-width: 534px;
-}
 #page-container {
   width: 80%;
   margin: 0 auto;
+}
+a {
+  text-decoration: none;
 }
 
 /* Top Banner */
@@ -31,7 +35,7 @@ body {
 .top_banner {
   background-image: url("./images/intro-img-812gts.jfif");
   background-size: cover;
-  background-position: center  center;
+  background-position: center center;
   background-repeat: no-repeat;
   height: 100vh;
   position: relative;
@@ -40,8 +44,8 @@ body {
   color: rgba(0, 0, 0, 0.6);
   font-family: "Russo One", sans-serif;
   text-transform: uppercase;
-  text-shadow: 2px;
-  font-size: larger;
+  text-shadow: 1px 2px 5px;
+  font-size: 2.2em;
   position: absolute;
   bottom: 5%;
   left: 50%;
@@ -50,57 +54,62 @@ body {
 
 /* Top Menu */
 
-nav {
-  margin-top: -5px;
+#main-menu {
+  background-color: black;
+  position: sticky;
   top: 0;
-  z-index: 1;
   font-size: 1.1em;
   text-transform: uppercase;
-  background-color: rgb(0, 0, 0);
-  position: sticky;
 }
-.parent-menu a {
+#main-menu .parent-menu > li {
+  display: inline-block;
+  padding: 15px;
+  border-right: 1px solid rgba(255, 0, 0, 0.5);
+  color: rgba(255, 255, 255, 0.7);
+}
+#main-menu .parent-menu > li:first-child {
+  border-left: 1px solid rgba(255, 0, 0, 0.5);
+  color: red;
+}
+#main-menu .parent-menu a {
   color: rgba(255, 255, 255, 0.7);
   text-decoration: none;
 }
-.parent-menu > li {
-  color: rgba(255, 255, 255, 0.7);
-  display: inline-block;
-  padding: 16px;
-  border-right: 1px solid rgba(255, 0, 0, 0.5);
+#main-menu li a:hover {
+  text-decoration: underline;
 }
-.parent-menu li:first-child {
-  color: rgb(255, 0, 0);
-  border-left: 1px solid rgba(255, 0, 0, 0.5);
-}
-.sub-menu-caption {
+#main-menu .sub-menu-caption {
   position: relative;
-  display: inline-block;
 }
-.sub-menu {
-  background-color: rgb(0, 0, 0);
-  width: 100%;
+#main-menu .sub-menu {
   display: none;
   position: absolute;
+  background-color: black;
+  right: -1px;
   left: -1px;
 }
-.sub-menu-caption:hover .sub-menu {
+#main-menu .sub-menu-caption:hover .sub-menu {
   display: block;
 }
-.sub-menu li {
+#main-menu .sub-menu li {
+  padding: 10px;
   font-style: italic;
   border: 1px solid rgba(255, 0, 0, 0.5);
   border-top: none;
-  padding: 10px;
 }
-.sub-menu li:last-of-type {
+#main-menu .sub-menu li:last-of-type {
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
 }
-.right-menu {
+#main-menu .sub-menu li a:hover {
+  color: red;
+  text-decoration: underline;
+}
+
+#main-menu .right-menu {
   background-color: rgba(255, 0, 0, 0.5);
   float: right;
-  border-right: none !important;
+  border-right: none;
 }
 
 /* Main text */
@@ -111,19 +120,20 @@ h3,
 h4,
 h5,
 h6 {
+  font-family: "Russo One", sans-serif;
   color: rgb(255, 255, 255);
   font-weight: 500;
 }
 h1 {
-  font-size: 1.8em;
+  font-size: 1.7em;
   text-transform: capitalize;
   font-variant: small-caps;
 }
 h2 {
-  font-size: 1.4em;
+  font-size: 1.3em;
 }
 h3 {
-  font-size: 1.2em;
+  font-size: 1.1em;
 }
 article {
   background-color: rgba(0, 0, 0, 0.8);
@@ -139,10 +149,16 @@ article {
 .title-red {
   color: rgb(255, 0, 0);
 }
+.lead {
+  color: white;
+}
 
 #fuel-consumption {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+}
+#interior-img {
+  margin-top: 0px;
 }
 .para-head {
   font-size: 1.1em;
@@ -156,31 +172,34 @@ article {
   justify-content: flex-end;
 }
 .small {
-  font-size: 0.8em;
+  font-size: 0.7em;
   margin-left: 50px;
+  line-height: 140%;
+}
+.small > p {
+  margin-bottom: 10px;
 }
 
-.div-img-right img {
+#image-right img {
   width: 100%;
 }
-.div-img-right {
+#image-right {
+  margin: 0 0 0 10px;
   width: 50%;
   min-width: 480px;
   position: relative;
   float: right;
-  margin: 0 0 0 10px;
 }
-.div-img-right .img-text {
+#image-right .img-text {
+  position: absolute;
+  padding: 20px 0 20px 10px;
   color: rgb(255, 0, 0);
   font-family: "Russo One", sans-serif;
   text-transform: uppercase;
-  text-shadow: 1px 3px 4px black;
+  text-shadow: 1px 2px 3px black;
   font-size: 1.7em;
   font-weight: bold;
-  letter-spacing: -0.5px;
   width: 100%;
-  position: absolute;
-  padding: 20px 0 20px 10px;
 }
 .main-container > img {
   width: 20%;
@@ -195,10 +214,9 @@ article {
   text-align: left;
 }
 .spec-container > h2 {
-  margin: 0 0 20px 0;
+  margin: 0 0 40px 0;
 }
 .spec-container::after {
-  display: table;
   content: "";
   clear: both;
 }
@@ -261,7 +279,6 @@ footer {
 .menu-bottom li a {
   color: rgba(255, 0, 0, 0.8);
   text-transform: capitalize;
-  text-decoration: none;
   font-variant: small-caps;
   padding: 0 5px 0 5px;
 }
@@ -272,17 +289,13 @@ footer {
   text-align: center;
 }
 
+/* Ferrari image */
+
 #logo {
   right: 0;
   bottom: 0;
   position: fixed;
 }
-
 #logo:hover img {
   border: 2px solid red;
-}
-
-li a:hover {
-  color: rgb(255, 0, 0);
-  text-decoration: underline;
 }
