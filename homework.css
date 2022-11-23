@@ -57,6 +57,7 @@ a {
 #main-menu {
   background-color: black;
   position: sticky;
+  z-index: 1;
   top: 0;
   font-size: 1.1em;
   text-transform: uppercase;
@@ -141,48 +142,55 @@ article {
 }
 
 .main-container {
-  padding: 30px 50px 30px 60px;
+  padding: 30px 60px;
 }
 .main-container > * {
-  margin: 10px 0 10px 0;
+  margin: 10px 0;
 }
+
 .title-red {
-  color: rgb(255, 0, 0);
+  color: red;
 }
 .lead {
   color: white;
+}
+.main-container > h2 {
+  margin-bottom: 20px;
 }
 
 #fuel-consumption {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
 }
-#interior-img {
-  margin-top: 0px;
-}
-.para-head {
+#fuel-consumption .para-head {
   font-size: 1.1em;
   color: rgba(255, 255, 255, 0.9);
   letter-spacing: -0.3px;
 }
-.column-2 {
+#fuel-consumption .column-2 {
   grid-column: 3 / 5;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
 }
-.small {
+#fuel-consumption .small {
   font-size: 0.7em;
   margin-left: 50px;
   line-height: 140%;
 }
-.small > p {
+#fuel-consumption .small > p:first-of-type {
   margin-bottom: 10px;
 }
 
-#image-right img {
-  width: 100%;
+#interior-img {
+  margin-top: 0px;
+  width: 20%;
+  min-width: 170px;
+  display: block;
+  float: left;
+  margin-right: 10px;
 }
+
 #image-right {
   margin: 0 0 0 10px;
   width: 50%;
@@ -192,33 +200,29 @@ article {
 }
 #image-right .img-text {
   position: absolute;
-  padding: 20px 0 20px 10px;
-  color: rgb(255, 0, 0);
+  padding: 20px 10px;
+  color: red;
   font-family: "Russo One", sans-serif;
   text-transform: uppercase;
   text-shadow: 1px 2px 3px black;
-  font-size: 1.7em;
+  font-size: 1.6em;
   font-weight: bold;
+}
+#image-right img {
   width: 100%;
 }
-.main-container > img {
-  width: 20%;
-  min-width: 170px;
-  display: block;
-  float: left;
-  margin-right: 10px;
+
+.dynamics-list {
+  list-style: circle inside none;
 }
 
 .spec-container {
-  padding: 40px 8% 40px 8%;
+  padding: 40px 120px;
   text-align: left;
+  line-height: 170%;
 }
 .spec-container > h2 {
-  margin: 0 0 40px 0;
-}
-.spec-container::after {
-  content: "";
-  clear: both;
+  margin-bottom: 40px;
 }
 .spec-container .specs:not(.bottom) {
   width: 50%;
@@ -227,22 +231,12 @@ article {
   margin-bottom: 20px;
 }
 .spec-container .specs:not(.bottom) dl {
-  margin-bottom: 10px;
+  margin: 5px 0;
   overflow: hidden;
-  padding: 0;
 }
 .spec-container .specs:not(.bottom) dl dt {
-  margin: 0;
   float: left;
   width: 40%;
-  padding-top: 5px;
-}
-.spec-container .specs:not(.bottom) dl dd {
-  padding-top: 5px;
-  width: 70%;
-}
-.spec-container .bottom {
-  width: 100%;
 }
 .spec-container .bottom dl dt {
   display: inline;
