@@ -238,6 +238,9 @@ article {
   float: left;
   width: 40%;
 }
+.spec-container .bottom {
+  clear: both;
+}
 .spec-container .bottom dl dt {
   display: inline;
 }
